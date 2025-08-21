@@ -2,7 +2,7 @@
 
 # 🧪 Quality Clouds Integration
 
-Welcome to the official Quality Clouds GitHub repository! This project provides integrations and tools to help you monitor and manage **technical debt**, **code quality**, and **governance** across cloud platforms like **ServiceNow**, **Salesforce**, and **Microsoft Power Platform**.
+Welcome to the official Quality Clouds GitHub repository! This project provides integrations and tools to help you monitor and manage **technical debt**, **code quality**, and **governance** across cloud platforms like **ServiceNow**, **Salesforce**, and **Microsoft Power Platform & Dynamics 365**.
 
 > ✅ Designed for developers, architects, and DevOps teams who care about scalable, maintainable enterprise cloud code.
 
