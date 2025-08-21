@@ -89,7 +89,7 @@ Check out [`CONTRIBUTING.md`](CONTRIBUTING.md) and [`CODE_OF_CONDUCT.md`](CODE_O
 
 ## 🛡 License
 
-This project is licensed 
+This project is licensed. Free credits available.
 
 ---
 
