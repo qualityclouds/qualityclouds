@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Quality Clouds — Developer Signup</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <main class="card">
+    <h1>Get Access</h1>
+    <p>Enter your details to create your developer entry. We'll add you to our updates.</p>
+
+    <form id="qc-form" novalidate>
+      <div class="field">
+        <label for="email">Work email *</label>
+        <input id="email" name="email" type="email" required autocomplete="email" />
+        <small class="error" data-for="email"></small>
+      </div>
+
+      <div class="grid">
+        <div class="field">
+          <label for="firstname">First name</label>
+          <input id="firstname" name="firstname" type="text" autocomplete="given-name" />
+        </div>
+        <div class="field">
+          <label for="lastname">Last name</label>
+          <input id="lastname" name="lastname" type="text" autocomplete="family-name" />
+        </div>
+      </div>
+
+      <!-- Honeypot (bot trap) -->
+      <input type="text" name="company" id="company" class="hp" tabindex="-1" autocomplete="off" />
+
+      <button type="submit" id="submit">Request Access</button>
+      <p id="msg" role="status" aria-live="polite"></p>
+    </form>
+  </main>
+
+  <script>
+    const WORKER_ENDPOINT = "https://YOUR-WORKER-ROUTE.example.workers.dev/submit"; // set after you deploy the worker
+
+    const form = document.getElementById("qc-form");
+    const msg  = document.getElementById("msg");
+
+    function setMsg(text, type="info") {
+      msg.textContent = text;
+      msg.className = type;
+    }
+
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      setMsg("");
+
+      // Simple validation
+      const email = form.email.value.trim();
+      if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        setMsg("Please enter a valid email.", "error");
+        return;
+      }
+      // honeypot
+      if (form.company.value) return;
+
+      const payload = {
+        email,
+        firstname: form.firstname.value.trim() || null,
+        lastname:  form.lastname.value.trim()  || null
+      };
+
+      try {
+        setMsg("Submitting…");
+        const res = await fetch(WORKER_ENDPOINT, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload),
+        });
+
+        const data = await res.json().catch(()=>({}));
+        if (res.ok) {
+          setMsg("Thanks! You’re in. Check your email.", "success");
+          form.reset();
+        } else {
+          setMsg(data?.error || "Something went wrong. Please try again.", "error");
+        }
+      } catch (err) {
+        setMsg("Network error. Please try again.", "error");
+      }
+    });
+  </script>
+</body>
+</html>
