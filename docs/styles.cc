@@ -1,92 +1,101 @@
-/* === Quality Clouds Developer Form === */
+/* === Quality Clouds Developer Form (v2) === */
 
 :root {
   --qc-teal: #17B098;
   --qc-blue: #4368B0;
-  --qc-yellow: #EFD500;
-  --qc-orange: #F18627;
   --qc-bg: #F8FAFC;
   --qc-text: #1A1A1A;
-  --radius: 12px;
+  --radius: 10px;
   --transition: all 0.25s ease;
-  font-family: "Inter", "Segoe UI", Roboto, sans-serif;
+  --font-mono: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+  font-family: var(--font-mono);
 }
 
 body {
   margin: 0;
-  background: var(--qc-bg);
+  background: linear-gradient(180deg, #F8FAFC 0%, #EBF3F9 100%);
   color: var(--qc-text);
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   min-height: 100vh;
 }
 
-/* === Header === */
+/* === Header / Logo === */
 header {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.75rem;
   margin-top: 2rem;
+  margin-bottom: 1rem;
 }
 
 header img {
-  height: 48px;
+  height: 56px;
   width: auto;
 }
 
+/* === Form Card === */
 main.card {
   background: #fff;
-  padding: 2.5rem 2rem;
+  padding: 2rem 2.5rem;
   border-radius: var(--radius);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 6px 20px rgba(67, 104, 176, 0.15);
   width: 100%;
-  max-width: 480px;
+  max-width: 440px;
   text-align: left;
-  margin: 2rem 1rem;
+  margin-bottom: 3rem;
+  transition: box-shadow 0.3s ease;
+}
+
+main.card:hover {
+  box-shadow: 0 10px 30px rgba(67, 104, 176, 0.25);
 }
 
 h1 {
-  font-size: 1.75rem;
+  font-size: 1.5rem;
   color: var(--qc-blue);
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.5rem;
 }
 
 p {
   color: #333;
+  font-size: 0.95rem;
   margin-top: 0;
   margin-bottom: 1.5rem;
+  line-height: 1.4;
+}
+
+/* === Form === */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .field {
-  margin-bottom: 1rem;
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1rem;
+  display: flex;
+  flex-direction: column;
 }
 
 label {
   font-weight: 600;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   margin-bottom: 0.25rem;
-  display: block;
   color: var(--qc-blue);
 }
 
 input {
   width: 100%;
-  padding: 0.75rem 0.9rem;
+  padding: 0.6rem 0.8rem;
   border-radius: var(--radius);
   border: 1px solid #d1d5db;
   background: #fff;
   color: var(--qc-text);
-  font-size: 1rem;
+  font-size: 0.95rem;
   transition: var(--transition);
+  font-family: var(--font-mono);
 }
 
 input:focus {
@@ -95,16 +104,19 @@ input:focus {
   box-shadow: 0 0 0 3px rgba(23, 176, 152, 0.2);
 }
 
+/* === Button === */
 button {
+  margin-top: 0.5rem;
   background: var(--qc-teal);
   color: white;
   border: none;
-  padding: 0.9rem 1.2rem;
+  padding: 0.75rem 1rem;
   border-radius: var(--radius);
   font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
   transition: var(--transition);
+  width: 100%;
 }
 
 button:hover {
@@ -131,7 +143,10 @@ button:hover {
 
 /* === Responsive === */
 @media (max-width: 480px) {
-  .grid {
-    grid-template-columns: 1fr;
+  main.card {
+    padding: 1.5rem;
+  }
+  header img {
+    height: 48px;
   }
 }
