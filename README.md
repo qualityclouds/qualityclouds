@@ -97,6 +97,6 @@ This project is licensed. Free credits available.
 
 > “We help enterprises scale safely in the cloud by making code quality visible, measurable, and actionable.”
 
-Learn more at [www.qualityclouds.com](https://www.qualityclouds.com)
+Learn more at [www.qualityclouds.ai](https://www.qualityclouds.ai)
 
 ---
