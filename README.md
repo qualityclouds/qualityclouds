@@ -2,50 +2,71 @@
 
 # 🧪 Quality Clouds Integration
 
-Welcome to the official Quality Clouds GitHub repository! This project provides integrations and tools to help you monitor and manage **technical debt**, **code quality**, and **governance** across cloud platforms like **ServiceNow**, **Salesforce**, and **Microsoft Power Platform & Dynamics 365**.
+This is the official Model Context Protocol (MCP) server for Quality Clouds — the governance layer for human and AI-generated code.
 
+This server bridges the gap between probabilistic AI generation and deterministic enterprise governance. It enables AI coding assistants (like Claude Desktop, Cursor, or IDE agents) to interface directly with the Quality Clouds platform to retrieve policy context, validate logic in real-time, and query technical debt profiles.
 > ✅ Designed for developers, architects, and DevOps teams who care about scalable, maintainable enterprise cloud code.
 
----
+> **The Core Concept:** You don't ask for a code check. You ask for code, and the AI automatically validates and fixes it against your ruleset before displaying the final result.
 
-## 🚀 What Is Quality Clouds?
+## 🚀 Overview
 
-[Quality Clouds](https://www.qualityclouds.com) is a SaaS platform that enables organizations to:
-- Detect **technical debt**
-- Enforce **development best practices**
-- Provide **code review automation**
-- Benchmark and report across environments
+AI coding assistants often generate code that looks correct but contains hidden security risks or performance violations (e.g., SOQL injection in Salesforce, inefficiency in ServiceNow loops).
 
-We support platforms including:
-- ServiceNow
-- Salesforce
-- Microsoft Power Platform
-- Adobe Magento
+This MCP server solves that by introducing a **"Self-Correction Loop"**:
+1.  **Generate:** Your AI drafts the initial code.
+2.  **Validate (Invisible):** It privately runs the code through **LivecheckAI**.
+3.  **Correct:** If issues are found, the AI fixes them immediately.
+4.  **Deliver:** You receive the final, clean, and compliant code.
 
----
+## 🔧 Capabilities (Tools)
 
-## 🔧 Features
+This server exposes the following tool to your AI assistant:
 
-- 🔍 **Static code analysis** for your platform-specific code
-- 📊 **Dashboards and KPIs** to visualize technical debt trends
-- 🧰 **CI/CD Integrations** (e.g., GitHub Actions, Jenkins)
-- 📨 **Real-time developer feedback** during commit or deployment
-- 📎 Integration-ready SDKs and sample scripts
-- Salesforce MCP Server
-- ServiceNow MCP Server
+### `run_livecheck`
+Performs a real-time scan of a code snippet.
+* **What it does:** Returns a list of severity-rated issues and remediation advice.
+* **How it works:** The AI calls this tool internally during its thought process to "spellcheck" its own logic.
 
----
+## 🌐 Supported Platforms
 
-## 📦 Repositories
+LivecheckAI supports real-time validation for:
+* **ServiceNow** (Server-side scripts, Client scripts)
+* **Salesforce** (Apex, LWC, Visualforce)
+* **Microsoft Dynamics 365** (C# Plugins, TypeScript)
+* **Javascript / React** (General web standards)
 
-This GitHub organization includes:
-- 🧱 Plugins & Extensions (e.g., for CI tools)
-- 🧪 API examples
-- 📜 SDKs
-- 🧩 Integration scaffolds
 
-Check the list of repos to get started with the one that fits your use case.
+## 📦 Installation & Configuration
 
+### 1. Get your Free API Key
+You need a Quality Clouds API key to run scans.
+* 👉 **[Sign Up for Free](https://www.qualityclouds.ai)**
+* Log in and navigate to your Profile to generate an API Key.
+
+### 2. Install the Server
+Ensure you have `uv` or `pip` installed.
+
+**Claude Desktop Configuration (`claude_desktop_config.json`):**
+```json
+{
+  "mcpServers": {
+    "qualityclouds": {
+      "command": "uv",
+      "args": [
+        "--directory",
+        "/path/to/mcp-server-qualityclouds",
+        "run",
+        "mcp-server-qualityclouds"
+      ],
+      "env": {
+        "QC_API_KEY": "your_api_key_here",
+        "QC_INSTANCE_URL": "[https://api.qualityclouds.com](https://api.qualityclouds.com)"
+      }
+    }
+  }
+}
+```
 ---
 
 ## 📂 Example Projects
