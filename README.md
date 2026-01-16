@@ -82,7 +82,6 @@ Ensure you have `uv` or `pip` installed.
 ## 📘 Documentation
 
 - [Official Docs](https://docs.qualityclouds.com)
-- [API Reference](https://docs.qualityclouds.com/api/)
 - [Blog](https://www.qualityclouds.ai/blog/platform-first-governance-controlling-logic-where-it-s-actually-created)
 
 ---
