@@ -75,7 +75,7 @@ Ensure you have `uv` or `pip` installed.
 |------|-------------|
 | [`qualityclouds-github-action`](https://github.com/qualityclouds/github-action) | Run Quality Clouds checks in GitHub Actions |
 | [`qualityclouds-servicenow-plugin`](https://github.com/qualityclouds/servicenow-plugin) | ServiceNow developer plugin integration |
-| [`qualityclouds-api-examples`](https://github.com/qualityclouds/api-examples) | Sample code using the REST API |
+
 
 ---
 
