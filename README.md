@@ -103,7 +103,7 @@ Check out [`CONTRIBUTING.md`](CONTRIBUTING.md) and [`CODE_OF_CONDUCT.md`](CODE_O
 ## 💬 Community & Support
 
 - 💬 [Slack Community](https://join.slack.com/t/qualityclouds/shared_invite/...) 
-- 🐛 [Open an Issue](https://github.com/qualityclouds/your-repo/issues)
+- 🐛 [Open an Issue](https://github.com/qualityclouds/qualityclouds/issues/new)
 - 📬 Email us at [support@qualityclouds.com](mailto:support@qualityclouds.com)
 
 ---
