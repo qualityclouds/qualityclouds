@@ -41,7 +41,7 @@ LivecheckAI supports real-time validation for:
 
 ### 1. Get your Free API Key
 You need a Quality Clouds API key to run scans.
-* 👉 **[Sign Up for Free](https://www.qualityclouds.ai)**
+* 👉 **[Sign Up for Free](https://id.qualityclouds.com/sign-up)**
 * Log in and navigate to your Profile to generate an API Key.
 
 ### 2. Install the Server
