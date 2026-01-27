@@ -32,7 +32,7 @@ This MCP server solves that by introducing a **"Self-Correction Loop"**:
 3.  **Correct:** If issues are found, the AI fixes them immediately.
 4.  **Deliver:** You receive the final, clean, and compliant code.
 
-## 🔧 Capabilities (Tools)
+## 🔧 Capabilities
 
 Performs a real-time scan of a code snippet.
 * **What it does:** Returns a list of severity-rated issues and remediation advice.
