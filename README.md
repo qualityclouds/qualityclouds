@@ -1,8 +1,21 @@
-# qualityclouds
+<p align="center">
+    <a href="https://docs.qualityclouds.com">
+    <img src="https://img.shields.io/badge/Docs-Quality%20Clouds-4C1D95?style=flat&logo=readme" />
+  </a>
+  <a href="https://qualityclouds.com">
+    <img src="https://img.shields.io/badge/Website-qualityclouds.ai-4C1D95?style=flat&logo=google-chrome" />
+  </a>
+    <img src="https://img.shields.io/badge/ISO%2FIEC%2027001-Certified-D4AF37?style=flat&logo=security" />
+   </a>
+   <a href="https://id.qualityclouds.com/sign-up">
+    <img src="https://img.shields.io/badge/SIGNUP-FREE-2563EB?style=flat&logo=google-chrome" />
+  </a>
+  <a href="https://github.com/qualityclouds">
+    <img src="https://img.shields.io/badge/Github-MCP-10B981" alt="Repositories">
 
-# 🧪 Quality Clouds Integration
+# Quality Clouds Integration
 
-This is the official Model Context Protocol (MCP) server for Quality Clouds — the governance layer for human and AI-generated code.
+This is the official **Model Context Protocol (MCP)** server for Quality Clouds — the governance layer for **human and AI-generated code.**
 
 This server bridges the gap between probabilistic AI generation and deterministic enterprise governance. It enables AI coding assistants (like Claude Desktop, Cursor, or IDE agents) to interface directly with the Quality Clouds platform to retrieve policy context, validate logic in real-time, and query technical debt profiles.
 > ✅ Designed for developers, architects, and DevOps teams who care about scalable, maintainable enterprise cloud code.
@@ -21,9 +34,6 @@ This MCP server solves that by introducing a **"Self-Correction Loop"**:
 
 ## 🔧 Capabilities (Tools)
 
-This server exposes the following tool to your AI assistant:
-
-### `run_livecheck`
 Performs a real-time scan of a code snippet.
 * **What it does:** Returns a list of severity-rated issues and remediation advice.
 * **How it works:** The AI calls this tool internally during its thought process to "spellcheck" its own logic.
@@ -39,43 +49,10 @@ LivecheckAI supports real-time validation for:
 
 ## 📦 Installation & Configuration
 
-### 1. Get your Free API Key
-You need a Quality Clouds API key to run scans.
+### 1. Get your Free account in Quality clouds to authentificate
 * 👉 **[Sign Up for Free](https://id.qualityclouds.com/sign-up)**
-* Log in and navigate to your Profile to generate an API Key.
-
-### 2. Install the Server
-Ensure you have `uv` or `pip` installed.
-
-**Claude Desktop Configuration (`claude_desktop_config.json`):**
-```json
-{
-  "mcpServers": {
-    "qualityclouds": {
-      "command": "uv",
-      "args": [
-        "--directory",
-        "/path/to/mcp-server-qualityclouds",
-        "run",
-        "mcp-server-qualityclouds"
-      ],
-      "env": {
-        "QC_API_KEY": "your_api_key_here",
-        "QC_INSTANCE_URL": "[https://api.qualityclouds.com](https://api.qualityclouds.com)"
-      }
-    }
-  }
-}
-```
----
-
-## 📂 Example Projects
-
-| Repo | Description |
-|------|-------------|
-| [`qualityclouds-github-action`](https://github.com/qualityclouds/github-action) | Run Quality Clouds checks in GitHub Actions |
-| [`qualityclouds-servicenow-plugin`](https://github.com/qualityclouds/servicenow-plugin) | ServiceNow developer plugin integration |
-
+* Once you setup your credentials, you will be able to authentificate in Visual Studio Code, and start using it. 
+* More information in this **[Article](https://qualityclouds.com/documentation/qc/livecheckai-via-mcp/getting-started-with-livecheckai-for-salesforce-via-mcp/)**
 
 ---
 
