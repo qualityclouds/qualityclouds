@@ -58,8 +58,8 @@ LivecheckAI supports real-time validation for:
 
 ## 📘 Documentation
 
-- [Official Docs](https://docs.qualityclouds.com)
-- [Blog](https://www.qualityclouds.ai/blog/platform-first-governance-controlling-logic-where-it-s-actually-created)
+- [Official Docs](https://qualityclouds.com/documentation/)
+- [Blog](https://www.qualityclouds.ai/blog)
 
 ---
 
