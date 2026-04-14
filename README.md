@@ -28,7 +28,7 @@ This server bridges the gap between probabilistic AI generation and deterministi
   <h3>
     🚀 
     <a href="https://id.qualityclouds.com/sign-up" target="_blank" rel="noopener noreferrer">
-      LivecheckAI (via MCP) for Salesforce – Try it for Free!
+      LivecheckAI (via MCP) for Salesforce – Try it for Free! ↗
     </a>
   </h3>
 </div>
