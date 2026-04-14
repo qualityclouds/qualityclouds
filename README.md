@@ -22,7 +22,17 @@ This server bridges the gap between probabilistic AI generation and deterministi
 
 > **The Core Concept:** You don't ask for a code check. You ask for code, and the AI automatically validates and fixes it against your ruleset before displaying the final result.
 
-## 🚀 Overview
+---
+
+<div align="center">
+
+### 🚀 [LivecheckAI (via MCP) for Salesforce — Try it for Free!](https://id.qualityclouds.com/sign-up)
+
+</div>
+
+---
+
+## 💡 Overview
 
 AI coding assistants often generate code that looks correct but contains hidden security risks or performance violations (e.g., SOQL injection in Salesforce, inefficiency in ServiceNow loops).
 
