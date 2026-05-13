@@ -63,7 +63,7 @@ LivecheckAI supports real-time validation for:
 ## 📦 Installation & Configuration
 
 ### 1. Get your Free account in Quality clouds to authentificate
-* 👉 **[Sign Up for Free](https://id.qualityclouds.com/sign-up)**
+* 👉 **[Sign Up for Free](https://id.qualityclouds.com/sign-up?utm_source=GitHub+Listing&utm_medium=CTA&utm_campaign=sign+up+FREE)**
 * Once you setup your credentials, you will be able to authentificate in Visual Studio Code, and start using it. 
 * More information in this **[Article](https://qualityclouds.com/documentation/qc/livecheckai-via-mcp/getting-started-with-livecheckai-for-salesforce-via-mcp/)**
 
