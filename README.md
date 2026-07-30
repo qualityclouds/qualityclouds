@@ -1,112 +1,63 @@
-<p align="center">
-    <a href="https://docs.qualityclouds.com">
-    <img src="https://img.shields.io/badge/Docs-Quality%20Clouds-4C1D95?style=flat&logo=readme" />
-  </a>
-  <a href="https://qualityclouds.com">
-    <img src="https://img.shields.io/badge/Website-qualityclouds.ai-4C1D95?style=flat&logo=google-chrome" />
-  </a>
-    <img src="https://img.shields.io/badge/ISO%2FIEC%2027001-Certified-D4AF37?style=flat&logo=security" />
-   </a>
-   <a href="https://id.qualityclouds.com/sign-up">
-    <img src="https://img.shields.io/badge/SIGNUP-FREE-2563EB?style=flat&logo=google-chrome" />
-  </a>
-  <a href="https://github.com/qualityclouds">
-    <img src="https://img.shields.io/badge/Github-MCP-10B981" alt="Repositories">
+# Quality Clouds
 
-# Quality Clouds Integration
+AI Code Governance for enterprise platforms and for any Git repository. This repository is the index of everything Quality Clouds publishes on GitHub.
 
-This is the official **Model Context Protocol (MCP)** server for Quality Clouds — the governance layer for **human and AI-generated code.**
+[![Docs](https://img.shields.io/badge/Docs-Quality%20Clouds-4C1D95?style=flat&logo=readme)](https://qualityclouds.com/documentation/)
+[![Website](https://img.shields.io/badge/Website-qualityclouds.ai-4C1D95?style=flat&logo=google-chrome)](https://qualityclouds.ai)
 
-This server bridges the gap between probabilistic AI generation and deterministic enterprise governance. It enables AI coding assistants (like Claude Desktop, Cursor, or IDE agents) to interface directly with the Quality Clouds platform to retrieve policy context, validate logic in real-time, and query technical debt profiles.
-> ✅ Designed for developers, architects, and DevOps teams who care about scalable, maintainable enterprise cloud code.
+## What we do
 
-> **The Core Concept:** You don't ask for a code check. You ask for code, and the AI automatically validates and fixes it against your ruleset before displaying the final result.
+Quality Clouds turns an organization's governance, security, and quality standards into machine-readable rules, then applies those rules where code is written and before it reaches production. Human-written code and AI-generated code go through the same rules.
 
----
+We have been doing this since 2015 on enterprise SaaS platforms, where a bad change is expensive and hard to reverse. That rule library and the scan data behind it are what the products run on.
 
-<div align="center">
-  <h3>
-    🚀 
-    <a href="https://id.qualityclouds.com/sign-up?utm_source=GitHub+Listing&utm_medium=CTA&utm_campaign=sign+up+FREE" target="_blank" rel="noopener noreferrer">
-      LivecheckAI (via MCP) for Salesforce – Try it for Free! ↗
-    </a>
-  </h3>
-</div>
+Two product lines, two different problems.
 
----
+**Norma** governs any Git repository, in any stack. It connects to Cursor, Claude Code, Lovable, Replit, and other MCP clients, so the rules for your stack are in the model's context while it generates, and it gives the repository a Production-Ready Score across security, performance, scalability, manageability, maintainability, and architecture. The score is a diagnostic, not a gate. Permanent free tier.
 
-## 💡 Overview
+**Quality Clouds for ServiceNow, Salesforce, Microsoft Dynamics 365, and Adobe** governs the platform itself: Full Scan for a complete instance audit, LivecheckAI for real-time validation in the editor, and Quality Gates in CI to stop non-compliant changes.
 
-AI coding assistants often generate code that looks correct but contains hidden security risks or performance violations (e.g., SOQL injection in Salesforce, inefficiency in ServiceNow loops).
+## Start here
 
-This MCP server solves that by introducing a **"Self-Correction Loop"**:
-1.  **Generate:** Your AI drafts the initial code.
-2.  **Validate (Invisible):** It privately runs the code through **LivecheckAI**.
-3.  **Correct:** If issues are found, the AI fixes them immediately.
-4.  **Deliver:** You receive the final, clean, and compliant code.
+| If you are | Start with | Sign up |
+|---|---|---|
+| Building in a Git repository, with or without an AI editor | [qualityclouds-mcp](https://github.com/qualityclouds/qualityclouds-mcp) | [portal.qualityclouds.ai](https://portal.qualityclouds.ai?utm_source=github&utm_medium=readme&utm_campaign=qualityclouds) |
+| Running ServiceNow, Salesforce, Dynamics 365, or Adobe | [action-full-scan](https://github.com/qualityclouds/action-full-scan) and [livecheckai-mcp-salesforce](https://github.com/qualityclouds/livecheckai-mcp-salesforce) | [id.qualityclouds.com/sign-up](https://id.qualityclouds.com/sign-up) |
+| Curious how AI-generated code actually scores | [state-of-ai-code-2026](https://github.com/qualityclouds/state-of-ai-code-2026) | No account needed |
 
-## 🔧 Capabilities
+## Everything we publish
 
-Performs a real-time scan of a code snippet.
-* **What it does:** Returns a list of severity-rated issues and remediation advice.
-* **How it works:** The AI calls this tool internally during its thought process to "spellcheck" its own logic.
+### Install and run
 
-## 🌐 Supported Platforms
+| Repository | What it is | Platform |
+|---|---|---|
+| [qualityclouds-mcp](https://github.com/qualityclouds/qualityclouds-mcp) | Remote MCP server for Norma at `https://api.qualityclouds.ai/mcp`. Governance rules in the model's context at generation time, and a record of what was checked, fixed, and prevented. | Any stack |
+| [action-full-scan](https://github.com/qualityclouds/action-full-scan) | GitHub Action that runs a Quality Clouds scan on every pull request, with inline results. | Salesforce, ServiceNow |
+| [livecheckai-mcp-salesforce](https://github.com/qualityclouds/livecheckai-mcp-salesforce) | LivecheckAI via MCP: real-time validation of Apex, LWC, and metadata in VS Code. | Salesforce |
+| [Skill-production-ready-check](https://github.com/qualityclouds/Skill-production-ready-check) | Free Agent Skill that scores a codebase 0 to 100 for production readiness. No account, no network calls, read-only. | Any stack |
 
-LivecheckAI supports real-time validation for:
-* **ServiceNow** (Server-side scripts, Client scripts)
-* **Salesforce** (Apex, LWC, Visualforce)
-* **Microsoft Dynamics 365** (C# Plugins, TypeScript)
-* **Javascript / React** (General web standards)
+### Data and research
 
+| Repository | What it is |
+|---|---|
+| [state-of-ai-code-2026](https://github.com/qualityclouds/state-of-ai-code-2026) | Open dataset from scanning AI-generated public projects built with Lovable, Bolt, v0, and AI-assisted GitHub repositories. Methodology, ruleset, and charts included. CC-BY-4.0. |
 
-## 📦 Installation & Configuration
+### Community and examples
 
-### 1. Get your Free account in Quality clouds to authentificate
-* 👉 **[Sign Up for Free](https://id.qualityclouds.com/sign-up?utm_source=GitHub+Listing&utm_medium=CTA&utm_campaign=sign+up+FREE)**
-* Once you setup your credentials, you will be able to authentificate in Visual Studio Code, and start using it. 
-* More information in this **[Article](https://qualityclouds.com/documentation/qc/livecheckai-via-mcp/getting-started-with-livecheckai-for-salesforce-via-mcp/)**
+| Repository | What it is |
+|---|---|
+| [community](https://github.com/qualityclouds/community) | Announcements, feature requests, bug reports, questions, and roadmap. This is the only place we run discussions. |
+| [Norma-byQualityClouds-demo-repo](https://github.com/qualityclouds/Norma-byQualityClouds-demo-repo) | Sample application we scan in Norma demos. Deliberately imperfect. Not a starter template. |
+| [.github](https://github.com/qualityclouds/.github) | Security policy, code of conduct, contributing guide, and issue templates for the organization. |
 
----
+## Support
 
-## 📘 Documentation
+- Questions, ideas, and bugs: [community discussions](https://github.com/qualityclouds/community/discussions)
+- Security reports: [SECURITY.md](https://github.com/qualityclouds/.github/blob/main/SECURITY.md)
+- Anything else: help@qualityclouds.com
 
-- [Official Docs](https://qualityclouds.com/documentation/)
-- [Blog](https://www.qualityclouds.ai/blog)
+## About Quality Clouds
 
----
+Quality Clouds is a UK-headquartered company with offices in Barcelona and New York, governing enterprise platforms since 2015. ISO/IEC 27001 certified.
 
-## 🧑‍💻 Contributing
-
-We welcome contributions! Here's how to get started:
-
-1. Fork the repo
-2. Create a feature branch: `git checkout -b feat/my-feature`
-3. Commit changes: `git commit -am 'Add feature'`
-4. Push and create a pull request
-
-Check out [`CONTRIBUTING.md`](CONTRIBUTING.md) and [`CODE_OF_CONDUCT.md`](CODE_OF_CONDUCT.md) for more info.
-
----
-
-## 💬 Community & Support
-
-- 💬 [Slack Community](https://join.slack.com/t/qualityclouds/shared_invite/...) 
-- 🐛 [Open an Issue](https://github.com/qualityclouds/qualityclouds/issues/new)
-- 📬 Email us at [support@qualityclouds.com](mailto:support@qualityclouds.com)
-
----
-
-## 🛡 License
-
-This project is licensed. Free credits available.
-
----
-
-## ✨ About Quality Clouds
-
-> “We help enterprises scale safely in the cloud by making code quality visible, measurable, and actionable.”
-
-Learn more at [www.qualityclouds.ai](https://www.qualityclouds.ai)
-
----
+[Website](https://qualityclouds.ai) · [LinkedIn](https://www.linkedin.com/company/qualityclouds/) · [X](https://x.com/qualityclouds) · [YouTube](https://www.youtube.com/@qualityclouds3561)
