@@ -21,7 +21,7 @@ Two product lines, two different problems.
 
 | If you are | Start with | Sign up |
 |---|---|---|
-| Building in a Git repository, with or without an AI editor | [qualityclouds-mcp](https://github.com/qualityclouds/qualityclouds-mcp) | [portal.qualityclouds.ai](https://portal.qualityclouds.ai?utm_source=github&utm_medium=readme&utm_campaign=qualityclouds) |
+| Building in a Git repository, with or without an AI editor | [norma-mcp](https://github.com/qualityclouds/norma-mcp) | [portal.qualityclouds.ai](https://portal.qualityclouds.ai?utm_source=github&utm_medium=readme&utm_campaign=qualityclouds) |
 | Running ServiceNow, Salesforce, Dynamics 365, or Adobe | [action-full-scan](https://github.com/qualityclouds/action-full-scan) and [livecheckai-mcp-salesforce](https://github.com/qualityclouds/livecheckai-mcp-salesforce) | [id.qualityclouds.com/sign-up](https://id.qualityclouds.com/sign-up) |
 | Curious how AI-generated code actually scores | [state-of-ai-code-2026](https://github.com/qualityclouds/state-of-ai-code-2026) | No account needed |
 
@@ -31,7 +31,7 @@ Two product lines, two different problems.
 
 | Repository | What it is | Platform |
 |---|---|---|
-| [qualityclouds-mcp](https://github.com/qualityclouds/qualityclouds-mcp) | Remote MCP server for Norma at `https://api.qualityclouds.ai/mcp`. Governance rules in the model's context at generation time, and a record of what was checked, fixed, and prevented. | Any stack |
+| [norma-mcp](https://github.com/qualityclouds/norma-mcp) | Remote MCP server for Norma at `https://api.qualityclouds.ai/mcp`. Governance rules in the model's context at generation time, and a record of what was checked, fixed, and prevented. | Any stack |
 | [action-full-scan](https://github.com/qualityclouds/action-full-scan) | GitHub Action that runs a Quality Clouds scan on every pull request, with inline results. | Salesforce, ServiceNow |
 | [livecheckai-mcp-salesforce](https://github.com/qualityclouds/livecheckai-mcp-salesforce) | LivecheckAI via MCP: real-time validation of Apex, LWC, and metadata in VS Code. | Salesforce |
 | [Skill-production-ready-check](https://github.com/qualityclouds/Skill-production-ready-check) | Free Agent Skill that scores a codebase 0 to 100 for production readiness. No account, no network calls, read-only. | Any stack |
