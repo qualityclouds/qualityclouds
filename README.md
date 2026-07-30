@@ -9,7 +9,7 @@ AI Code Governance for enterprise platforms and for any Git repository. This rep
 
 Quality Clouds turns an organization's governance, security, and quality standards into machine-readable rules, then applies those rules where code is written and before it reaches production. Human-written code and AI-generated code go through the same rules.
 
-We have been doing this since 2015 on enterprise SaaS platforms, where a bad change is expensive and hard to reverse. That rule library and the scan data behind it are what the products run on.
+We have been doing this since 2017 on enterprise SaaS platforms, where a bad change is expensive and hard to reverse. That rule library and the scan data behind it are what the products run on.
 
 Two product lines, two different problems.
 
@@ -58,6 +58,6 @@ Two product lines, two different problems.
 
 ## About Quality Clouds
 
-Quality Clouds is a UK-headquartered company with offices in Barcelona and New York, governing enterprise platforms since 2015. ISO/IEC 27001 certified.
+Quality Clouds is a UK-headquartered company with offices in Barcelona and New York, governing enterprise platforms since 2017. ISO/IEC 27001 certified.
 
 [Website](https://qualityclouds.ai) · [LinkedIn](https://www.linkedin.com/company/qualityclouds/) · [X](https://x.com/qualityclouds) · [YouTube](https://www.youtube.com/@qualityclouds3561)
